@@ -1,0 +1,145 @@
+/* ===== PAGE LAYOUT ===== */
+.calllog-layout {
+  display: flex;
+  min-height: 100vh;
+  background: #f3f6fb;
+}
+
+/* ===== MAIN CONTENT ===== */
+.calllog-content {
+  flex: 1;
+  margin-left: 240px;
+  /* Matches fixed sidebar */
+  padding: 32px;
+  height: 100vh;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0f172a;
+  margin-bottom: 22px;
+}
+
+/* ===== TABLE CARD ===== */
+.table-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 18px 20px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+  overflow-x: auto;
+  /* Enable horizontal scroll */
+}
+
+/* ===== TABLE ===== */
+.calllog-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: 14px;
+  min-width: 1000px;
+  /* Ensure table doesn't squash too much */
+}
+
+.calllog-table thead th {
+  background: #f8fafc;
+  color: #1e293b;
+  font-weight: 600;
+  padding: 16px 14px;
+  border-bottom: 1px solid #e2e8f0;
+  white-space: nowrap;
+  /* Keep headers on one line */
+}
+
+.calllog-table thead th:first-child {
+  border-top-left-radius: 12px;
+}
+
+.calllog-table thead th:last-child {
+  border-top-right-radius: 12px;
+}
+
+.calllog-table td {
+  padding: 18px 14px;
+  border-bottom: 1px solid #e5e7eb;
+  color: #334155;
+  vertical-align: middle;
+}
+
+/* Row hover */
+.calllog-table tbody tr {
+  transition: background 0.15s ease;
+}
+
+.calllog-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+/* ===== DESCRIPTION COLUMN ===== */
+.description {
+  min-width: 200px;
+  max-width: 300px;
+  white-space: normal;
+  /* Allow text to wrap */
+  word-wrap: break-word;
+  color: #475569;
+  line-height: 1.5;
+}
+
+/* ===== CALL BUTTON (PROFESSIONAL CRM STYLE) ===== */
+.call-btn {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  color: #ffffff;
+
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+
+  box-shadow:
+    0 10px 22px rgba(34, 197, 94, 0.35);
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* Hover */
+.call-btn:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 14px 30px rgba(34, 197, 94, 0.45);
+  background: linear-gradient(135deg, #16a34a, #15803d);
+}
+
+/* Active (click) */
+.call-btn:active {
+  transform: scale(0.95);
+  box-shadow:
+    0 6px 14px rgba(34, 197, 94, 0.4);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .calllog-content {
+    padding: 20px;
+
+  }
+
+  .calllog-table {
+    font-size: 13px;
+  }
+
+  .description {
+    max-width: 160px;
+  }
+}

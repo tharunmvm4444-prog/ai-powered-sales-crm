@@ -1,0 +1,267 @@
+/* Global Clean Reset */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  /* Tighter line height */
+  font-weight: 400;
+  color-scheme: light;
+  color: #213547;
+  background-color: #ffffff;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  /* Strict no scroll */
+}
+
+/* App Container */
+.app-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+/* LEFT COLUMN */
+.left-column {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #e0e0e0;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.chart-section {
+  flex: 0 0 65%;
+  /* Aggressive 65% height */
+  height: 65%;
+  padding: 5px;
+  /* Minimal padding */
+  border-bottom: 1px solid #e0e0e0;
+  box-sizing: border-box;
+}
+
+.table-section {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0;
+  /* Remove padding for table to scroll full width */
+}
+
+/* RIGHT COLUMN */
+.right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* Reduced padding */
+  background-color: #fafafa;
+  box-sizing: border-box;
+}
+
+.right-panel-content {
+  width: 100%;
+  max-width: 550px;
+  /* Slightly tighter width */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  /* Reduced gap */
+}
+
+/* Detail Section - compacted */
+.detail-section {
+  flex: 0 0 auto;
+  /* Natural height */
+}
+
+/* Feedback Section - fills remaining */
+.feedback-section {
+  flex: 1;
+  min-height: 0;
+  /* Important for flex child to shrink */
+  display: flex;
+  flex-direction: column;
+}
+
+/* COMPONENTS */
+
+/* Chart Container */
+.chart-container-full {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chart-container-full h1 {
+  font-size: 1.2rem;
+  margin-bottom: 2px;
+  /* Minimal margin */
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+/* Rank Table */
+.rank-table-container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.rank-table-container h2 {
+  font-size: 1.1rem;
+  margin: 10px 15px;
+  /* Padding inside header only */
+  color: #444;
+}
+
+.table-wrapper {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.rank-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.rank-table th {
+  text-align: left;
+  padding: 8px 15px;
+  background: #f1f1f1;
+  color: #666;
+  font-size: 0.85rem;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.rank-table td {
+  padding: 8px 15px;
+  border-bottom: 1px solid #eee;
+  font-size: 0.9rem;
+}
+
+.rank-table tr:hover {
+  background-color: #f5f5f5;
+}
+
+.rank-table tr.active-row {
+  background-color: #e0f7fa;
+  border-left: 4px solid #00acc1;
+}
+
+.rank-cell {
+  font-weight: bold;
+  color: #555;
+}
+
+/* Detail Card Updates - COMPACT MODE */
+.detail-container-full {
+  width: 100%;
+  background: white;
+  padding: 20px 25px;
+  /* Reduced padding */
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 1px solid #f0f0f0;
+  box-sizing: border-box;
+}
+
+.detail-container-full h1 {
+  font-size: 1.6rem;
+  margin-bottom: 0;
+}
+
+.metrics-grid.large {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  /* Reduced gap */
+  margin-bottom: 15px;
+}
+
+.metric-item.large {
+  padding: 12px;
+  /* Reduced padding */
+  background: #f5f5f7;
+  border-radius: 10px;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+}
+
+.metric-value {
+  font-size: 1.2rem;
+  margin: 2px 0;
+}
+
+.metric-sub {
+  font-size: 0.7rem;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: #e5e5e5;
+  margin: 15px 0;
+}
+
+.score-section h2 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.score-display.large {
+  font-size: 4rem;
+  /* Reduced from 5rem or 6rem */
+  line-height: 1;
+}
+
+/* Feedback Card - COMPACT MODE */
+.feedback-container {
+  width: 100%;
+  background: white;
+  padding: 15px;
+  /* Reduced padding */
+  border-radius: 16px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  border: 2px solid #ddd;
+  text-align: center;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  /* Fills the flex parent */
+  overflow: hidden;
+}
+
+.feedback-emoji {
+  font-size: 2.5rem;
+  /* Reduced from 4rem */
+  margin-bottom: 5px;
+}
+
+.feedback-container h2 {
+  margin: 5px 0;
+  font-size: 1.5rem;
+  /* Reduced from 2rem */
+}
+
+.feedback-container p {
+  font-size: 1rem;
+  /* Reduced from 1.2rem */
+  margin: 0;
+}

@@ -1,0 +1,27 @@
+.multiline-chart {
+  width: 100%;
+  height: 100%;
+  padding-left: 0; /* remove any left bias */
+}
+
+/* Axis & label text */
+.recharts-text {
+  fill: #6b7280;
+  font-size: 12px;
+}
+
+/* Tooltip */
+.recharts-tooltip-wrapper {
+  font-size: 12px;
+}
+
+/* Legend spacing */
+.recharts-default-legend {
+  margin-top: 6px;
+}
+
+/* Make grid subtle */
+.recharts-cartesian-grid-horizontal line,
+.recharts-cartesian-grid-vertical line {
+  stroke: #e5e7eb;
+}

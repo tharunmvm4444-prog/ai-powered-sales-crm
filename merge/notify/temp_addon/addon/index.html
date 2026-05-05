@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Follow-Up | Email Tool</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            // Initialize EmailJS with Public Key
+            emailjs.init("cYfXTSQ7n2mfdvyes");
+        })();
+    </script>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <header>
+                <h1>Send Follow-Up</h1>
+                <p>Quickly send a personalized email to your customer.</p>
+            </header>
+
+            <form id="email-form">
+                <div class="form-group">
+                    <label for="salesperson_name">Your Name (Salesperson)</label>
+                    <input type="text" id="salesperson_name" name="salesperson_name" placeholder="e.g. Alex Johnson" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customer_name">Customer Name</label>
+                    <input type="text" id="customer_name" name="customer_name" placeholder="e.g. Sarah Smith" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customer_email">Customer Email</label>
+                    <input type="email" id="customer_email" name="customer_email" placeholder="sarah@example.com" required>
+                </div>
+
+                <button type="submit" id="send-btn">
+                    <span>Send Follow-Up Email</span>
+                    <div class="spinner" id="spinner"></div>
+                </button>
+            </form>
+
+            <div id="status-message" class="status-message"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

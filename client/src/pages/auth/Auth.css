@@ -1,0 +1,162 @@
+/* ===== ROOT ===== */
+.auth-wrapper {
+  display: flex;
+  min-height: 100vh;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+/* ===== FORM SECTION (LEFT) ===== */
+.auth-left {
+  flex: 6;
+  background: linear-gradient(
+    135deg,
+    #1e1b4b,
+    #4f46e5,
+    #7c3aed
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* FORM CARD */
+.auth-form {
+  background: #f8fafc;
+  width: 380px;
+  padding: 36px;
+  border-radius: 22px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+/* TITLE */
+.auth-form h2 {
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 6px;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  margin-bottom: 26px;
+}
+
+/* ===== INPUTS (NEUMORPHIC STYLE) ===== */
+.auth-form input,
+.auth-form select {
+  width: 100%;
+  padding: 14px 18px;
+  margin-bottom: 18px;
+  border-radius: 999px;
+  border: none;
+  background: #e5e7eb;
+  font-size: 14px;
+  color: #111827;
+  outline: none;
+
+  /* 🔥 KEY SHADOW PART */
+  box-shadow:
+    inset 4px 4px 8px rgba(0, 0, 0, 0.08),
+    inset -4px -4px 8px rgba(255, 255, 255, 0.9);
+}
+
+/* INPUT PLACEHOLDER */
+.auth-form input::placeholder {
+  color: #9ca3af;
+}
+
+/* FOCUS EFFECT */
+.auth-form input:focus,
+.auth-form select:focus {
+  background: #f3f4f6;
+  box-shadow:
+    0 0 0 2px rgba(124, 58, 237, 0.35),
+    inset 2px 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* ===== BUTTON ===== */
+.auth-form button {
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+
+  background: linear-gradient(
+    135deg,
+    #8b5cf6,
+    #7c3aed
+  );
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+
+  box-shadow:
+    0 12px 30px rgba(124, 58, 237, 0.45);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.auth-form button:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    0 18px 40px rgba(124, 58, 237, 0.55);
+}
+
+/* SWITCH TEXT */
+.switch {
+  margin-top: 18px;
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.switch span {
+  color: #7c3aed;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===== RIGHT (LOGO AREA) ===== */
+.auth-right {
+  flex: 6;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.auth-right img {
+  max-width: 55%;
+  height: auto;
+}
+
+/* ===== ERROR MESSAGE ===== */
+.error {
+  background: #fee2e2;
+  color: #b91c1c;
+  padding: 10px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+  .auth-wrapper {
+    flex-direction: column;
+  }
+
+  .auth-left,
+  .auth-right {
+    width: 100%;
+    min-height: 50vh;
+  }
+
+  .auth-form {
+    width: 90%;
+  }
+}

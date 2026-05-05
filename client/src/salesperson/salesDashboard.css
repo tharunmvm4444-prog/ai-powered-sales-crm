@@ -1,0 +1,37 @@
+.sales-layout {
+  min-height: 100vh;
+  background: #f3f6fb;
+}
+
+/* IMPORTANT FIX */
+.sales-content {
+  margin-left: 220px;
+  /* MUST MATCH SIDEBAR WIDTH */
+  padding: 24px;
+}
+
+.page-body {
+  margin-top: 16px;
+}
+
+.sales-layout {
+  min-height: 100vh;
+  background: #f3f6fb;
+}
+
+/* IMPORTANT FIX */
+.sales-content {
+  margin-left: 240px;
+  /* Matches fixed sidebar width */
+  padding: 24px;
+  height: 100vh;
+  /* Viewport height */
+  overflow-y: auto;
+  /* Enable vertical scrolling */
+  box-sizing: border-box;
+  /* Include padding in width/height */
+}
+
+.page-body {
+  margin-top: 16px;
+}
